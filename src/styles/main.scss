@@ -1,0 +1,8 @@
+@use './abstracts/variables' as *;
+@use './themes/index';
+@use './base/base';
+@use './abstracts/theme-classes';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

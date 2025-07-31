@@ -1,0 +1,15 @@
+// _dark.scss
+:root[data-theme='dark'] {
+  --bg-color: #111827;
+  --text-color: #f3f4f6;
+  --primary-color: #3b82f6;
+  --accent: #0f766e;
+  --on-accent: #ffffff;
+  --divider: #374151;
+  --toolbar: #1f2937;
+  --toolbar-highlight: #2563eb;
+  --primary-txt: #f9fafb;
+  --secondary-txt: #d1d5db;
+  --tertiary-txt: #9ca3af;
+  --accent-dark: #0e7490;
+}
