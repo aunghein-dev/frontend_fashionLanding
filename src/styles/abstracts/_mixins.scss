@@ -1,0 +1,6 @@
+
+@layer utilities {
+  .between {
+    @apply flex flex-row items-center justify-between ;
+  }
+}

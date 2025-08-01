@@ -1,11 +1,12 @@
-import Button from "./components/typography/Button"
+
+import Navbar from "./components/navigation/Navbar"
 import ThemeToggle from "./components/typography/ThemeToggle"
 
 function App() {
   return (
     <>
       <ThemeToggle />
-      <Button />
+      <Navbar/>
     </>
   )
 }

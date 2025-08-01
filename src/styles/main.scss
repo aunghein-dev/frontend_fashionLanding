@@ -2,7 +2,10 @@
 @use './themes/index';
 @use './base/base';
 @use './abstracts/theme-classes';
+@use './abstracts/mixins';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
