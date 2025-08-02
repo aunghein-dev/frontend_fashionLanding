@@ -2,6 +2,7 @@
 .bg-divider { background-color: var(--divider); }
 .bg-toolbar { background-color: var(--toolbar); }
 .bg-toolbar-highlight { background-color: var(--toolbar-highlight); }
+.bg-footer { background-color: var(--primary-txt); }
 
 .text-primary-txt { color: var(--primary-txt); }
 .text-secondary-txt { color: var(--secondary-txt); }
@@ -10,3 +11,4 @@
 .bg-accent { background-color: var(--accent); }
 .bg-accent-dark { background-color: var(--accent-dark); }
 .text-on-accent { color: var(--on-accent); }
+

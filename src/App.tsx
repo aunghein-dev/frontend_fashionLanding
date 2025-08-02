@@ -1,12 +1,15 @@
 
 import Navbar from "./components/navigation/Navbar"
-import ThemeToggle from "./components/typography/ThemeToggle"
+import Footer from "./components/ui/Footer"
+import Main from "./pages/main/Main"
+
 
 function App() {
   return (
     <>
-      <ThemeToggle />
       <Navbar/>
+      <Main/>
+      <Footer/>
     </>
   )
 }
