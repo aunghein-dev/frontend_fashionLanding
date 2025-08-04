@@ -6,6 +6,7 @@ import TermsAndPoliciesRoute from "@/data/termsAndPolicies.route";
 import FollowUsRoute from "@/data/followUs.route";
 import Payment from "@/data/payment.data";
 import PaymentCard from "../molecules/PaymentCard";
+import Selector from "../typography/Selector";
 
 export default function Footer(){
   return (
@@ -37,7 +38,7 @@ export default function Footer(){
             <span className="text-3xl font-extrabold">Mo Mo</span>
             <span className="text-gray-300/80">© 2023 MoMo. All rights reserved</span>
           </div>
-          <div>
+          <div className="flex flex-row items-center">
             <ul className="flex flex-row items-center gap-2">
               {
                 Payment.map(item => (
@@ -47,6 +48,23 @@ export default function Footer(){
                 ))
               }
             </ul>
+            <div className="relative flex flex-row items-center gap-1 ml-3">
+              <Selector header="EN" 
+                        options={["EN","MY","CN","JP","TH","VN"]} 
+                        className={{
+                          holderClass: "",
+                          itemClass: "bg-white"
+                        }}/>
+            </div>
+
+            <div className="relative flex flex-row items-center gap-1 ml-1">
+              <Selector header="MMK" 
+                        options={["USD","THB","JPY","CNY"]} 
+                        className={{
+                          holderClass: "",
+                          itemClass: "bg-white"
+                        }}/>
+            </div>
           </div>
        </div>
     
