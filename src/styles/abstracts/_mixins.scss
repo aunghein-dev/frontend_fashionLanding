@@ -2,5 +2,9 @@
   .between {
     @apply flex items-center justify-between;
   }
+  
+  .navlink {
+    @apply tracking-[0.2rem] font-[300] transition-all duration-100 ease-in-out;
+  }
 }
 

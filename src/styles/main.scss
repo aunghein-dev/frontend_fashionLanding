@@ -1,11 +1,14 @@
 @use './abstracts/variables' as *;
 @use './themes/index';
 @use './base/base';
-@use './abstracts/theme-classes';
-@use './abstracts/mixins';
+@use './abstracts/mixins' as *;
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+:root {
+  @apply light; 
+}

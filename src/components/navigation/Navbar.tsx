@@ -1,25 +1,31 @@
 import NavbarData from "@/data/navbar.data"
-import { LuSearch, LuHeart } from "react-icons/lu";
-import { RiContactsLine, RiShoppingBag4Line } from "react-icons/ri";
 import IconButton from "../typography/IconButton";
-
+import { IoBagHandle } from "react-icons/io5";
+import { Link } from "../typography/Link";
+import { IoMdContact } from "react-icons/io";
 export default function Navbar() {
+
   return (
-    <nav className="bg-white/20 backdrop-blur-md h-16  mx-auto px-6 fixed top-0 left-0 right-0">
+    <nav className="bg-base h-[160px] mx-auto px-6 fixed top-0 left-0 right-0 z-[1000]">
 
       <div className="flex items-center justify-between h-full max-w-5xl mx-auto">
         {/* Left: Logo + Links */}
-        <div className="flex items-center gap-6">
-          <span className=" font-bold text-3xl">Mo Mo</span>
-          <ul className="flex gap-4 text-base">
+        <div className="flex flex-row justify-center text-center items-center gap-6">
+          {/* Corrected: "font-noto" is now a single class */}
+          <span className="font-noto font-[500] text-5xl mr-6 cursor-pointer">Mo Mo</span>
+          <ul className="flex gap-1 text-base">
             {NavbarData.map((item) => (
             <li
               key={item.id}
-              className="relative px-2 py-1 text-sm font-medium  transition-all duration-200 ease-in-out hover:text-tertiary-txt hover:scale-[1.05] cursor-pointer group"
+              className="navlink w-full min-w-[95px] select-none text-center"
             >
-              <a href={item.path} className="relative z-10">
+              <Link
+                to={item.path}
+                className="relative z-10"
+                activeClassName="font-[600]"
+              >
                 {item.name}
-              </a>
+              </Link>
             </li>
 
             ))}
@@ -27,11 +33,9 @@ export default function Navbar() {
         </div>
 
         {/* Right: Icons */}
-        <ul className="flex items-center gap-3 ">
-          <li><IconButton icon={LuSearch} /></li>
-          <li><IconButton icon={RiContactsLine} /></li>
-          <li><IconButton icon={LuHeart} hasNoti /></li>
-          <li><IconButton icon={RiShoppingBag4Line} hasNoti /></li>
+        <ul className="flex flex-row justify-center text-center items-center gap-5">
+          <li><IconButton icon={IoBagHandle} hasNoti /></li>
+          <li><IconButton icon={IoMdContact} /></li>
         </ul>
       </div>
     </nav>

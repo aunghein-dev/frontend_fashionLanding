@@ -1,34 +1,24 @@
 const NavbarData = [
   {
-    name: "Home",
+    name: "HOME",
     path: "/",
     id: 1
   },
   {
-    name: "Shop",
-    path: "/shop",
+    name: "ABOUT",
+    path: "/about",
     id: 2
   }, 
   {
-    name: "Product",
-    path: "/product",
+    name: "SHOP",
+    path: "/shop",
     id: 3
   },
   {
-    name: "Pages",
-    path: "/pages",
+    name: "CONTACT",
+    path: "/contact",
     id: 4
   },
-  {
-    name: "Blog",
-    path: "/blog",
-    id: 5
-  },
-  {
-    name: "Elements",
-    path: "/elements",
-    id: 6
-  }
 ]
 
 export default NavbarData
