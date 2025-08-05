@@ -1,7 +1,7 @@
 
 import Navbar from "./components/navigation/Navbar"
 import Footer from "./components/ui/Footer"
-import Main from "./pages/main/Main"
+import Main from "./layouts/main/Main"
 
 function App() {
   return (

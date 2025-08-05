@@ -26,6 +26,9 @@ export default {
       'tertiary-txt-color': 'var(--tertiary-txt)',
       'accent-dark-color': 'var(--accent-dark)',
       'base': 'var(--base-color)',
+      'hero-bg': 'var(--hero-bg)',
+      'white-color': 'var(--white-color)',
+      'divider-color': 'var(--divider-color)',
     }
   }
 },

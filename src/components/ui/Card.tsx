@@ -16,31 +16,38 @@ interface CardProps {
 
 export default function Card({ card }: CardProps) {
   return (
-    <div className="h-[400px] 
-                min-w-[200px] 
-                w-full rounded-sm">
-      <img
-        src={card.imgUrl}
-        alt={card.name}
-        className="w-full h-[300px] object-cover object-center rounded-t-sm"
-      />
-      <div className="flex flex-col gap-1 mt-2">
-         <span>
+    <div className="h-[330px] 
+                    w-[190px] 
+                    font-noto">
+      <div className="relative">
+        <span className="h-[190px] w-full bg-hero-bg absolute top-0 left-0 bottom-0 right-0 rounded-[1.5rem]"/>
+        <img
+          src={card.imgUrl}
+          alt={card.name}
+          className="w-full h-[190px] object-cover object-center rounded-[1.5rem] select-none opacity-80"
+        />
+      </div>
+      
+      <div className="flex flex-row items-center justify-between gap-1 py-2.5
+                      border-b-[1px] border-divider-color text-lg">
+         <span className="-tracking-[0.05rem] font-[300]">
             {card.name}
           </span>
           <span>
             {card.displayPrice}
           </span>
       </div>
-      <div className="flex flex-row items-center gap-1 mt-2">
+      <div className="flex flex-row items-center gap-1 py-3 mb-3">
         {
           card.colors.map(color => (
             <div key={color.id} className="flex flex-row items-center gap-1">
-              <div className="w-4 h-4 rounded-full ring-1 ring-gray-200" style={{backgroundColor: color.hex}}></div>
+              <div className="w-5 h-5 rounded-full ring-[0.5px] ring-gray-300" style={{backgroundColor: color.hex}}></div>
             </div>
           ))
         }
       </div>
+      <button className="font-roboto text-[0.65rem] tracking-[0.3rem] p-2.5 bg-hero-bg text-white
+                         font-[300] flex flex-row items-center justify-center w-full">ADD TO CART</button>
      
     </div>
   )
