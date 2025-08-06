@@ -1,29 +1,24 @@
-const Payment = [
+const PaymentData = [
   {
     id: 1,
-    name: "KBZPay",
-    imgUrl: "src/assets/hero/hero.jpg",
+    name: "KBZ Pay",
+    imgUrl: "src/assets/payment/kbz.png"
   },
   {
     id: 2,
-    name: "Wavemoney",
-    imgUrl: "src/assets/hero/hero.jpg",
+    name: "AYA Pay",
+    imgUrl: "src/assets/payment/aya.jpeg"
   },
   {
     id: 3,
-    name: "AYAPay",
-    imgUrl: "src/assets/hero/hero.jpg",
+    name: "Wavemoney",
+    imgUrl: "src/assets/payment/wave.png"
   },
   {
     id: 4,
-    name: "A+",
-    imgUrl: "src/assets/hero/hero.jpg",
-  },
-  {
-    id: 5,
-    name: "UABPay",
-    imgUrl: "src/assets/hero/hero.jpg",
+    name: "CB Pay",
+    imgUrl: "src/assets/payment/cb.jpg"
   }
 ]
 
-export default Payment
+export default PaymentData

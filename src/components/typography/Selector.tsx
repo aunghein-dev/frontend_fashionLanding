@@ -27,19 +27,21 @@ export default function Selector({ header, options, className }: SelectorProps) 
   return (
     <Select>
       <SelectTrigger className={`w-auto between border-none 
-                                shadow-none select-none gap-2 ${holderClass}`}>
+                                shadow-none select-none gap-2 ${holderClass} 
+                                focus:outline-none focus:ring-0 `}>
         <SelectValue placeholder={header} />
       </SelectTrigger>
 
       {/* FIX: Add position="popper" and z-50 */}
-      <SelectContent position="popper" className={`border-none z-50 ${itemClass} rounded-[2px]`}>
-        <SelectGroup>
+      <SelectContent position="popper" className={`border-none z-50 ${itemClass} rounded-[2px]
+                                                   bg-white/90`}>
+        <SelectGroup className="tracking-[0.2rem]">
           <SelectLabel>{header}</SelectLabel>
           {options.map((option, index) => (
             <SelectItem
               key={option + index}
               value={option}
-              className={`text-sm px-2 mt-1 
+              className={`text-sm px-2 my-2 font-[300]
                          focus:outline-none cursor-pointer 
                          data-[state=checked]:font-bold ${itemClass}`}
             >

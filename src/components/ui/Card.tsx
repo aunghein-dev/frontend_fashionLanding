@@ -30,8 +30,10 @@ export default function Card({ card }: CardProps) {
       
       <div className="flex flex-row items-center justify-between gap-1 py-2.5
                       border-b-[1px] border-divider-color text-lg">
-         <span className="-tracking-[0.05rem] font-[300]">
-            {card.name}
+          <span
+           title={card.name}
+           className="-tracking-[0.05rem] font-[300] truncate">
+              {card.name}
           </span>
           <span>
             {card.displayPrice}

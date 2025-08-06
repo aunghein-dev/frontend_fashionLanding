@@ -18,7 +18,7 @@ export default {
       'primary-color': 'var(--primary-color)',
       'accent-color': 'var(--accent)',
       'on-accent-color': 'var(--on-accent)',
-      'divider-color': 'var(--divider)',
+      'divider': 'var(--divider)',
       'toolbar-color': 'var(--toolbar)',
       'toolbar-highlight-color': 'var(--toolbar-highlight)',
       'primary-txt-color': 'var(--primary-txt)',
@@ -29,6 +29,8 @@ export default {
       'hero-bg': 'var(--hero-bg)',
       'white-color': 'var(--white-color)',
       'divider-color': 'var(--divider-color)',
+      'black-color': 'var(--black-color)',
+      'gray-white': 'var(--gray-white)',
     }
   }
 },

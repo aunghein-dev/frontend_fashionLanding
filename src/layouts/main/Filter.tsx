@@ -3,11 +3,9 @@ import Selector from "@/components/typography/Selector"
 
 const Filter = () => {
   return (
-    <div className="mt-8
-                        max-w-5xl mx-auto px-4
-                        between">
+    <div className="between tracking-[0.2rem]">
     {/* The fix is in this line: changed justify-between to justify-start */}
-    <div className="flex flex-row items-center justify-start relative gap-4"> 
+    <div className="flex flex-row items-center justify-start relative gap-5"> 
       <FilterNotiShown/>
       <div className="relative flex flex-row items-center gap-1">
         <Selector header="Categories" options={[
@@ -35,3 +33,5 @@ const Filter = () => {
     </div>
   )
 }
+
+export default Filter

@@ -1,7 +1,8 @@
-import FilterNotiShown from "@/components/molecules/FilterNotiShown";
-import Selector from "@/components/typography/Selector";
 import ProductList from "./ProductList";
 import Hero from "@/components/cells/Hero";
+import Filter from "./Filter";
+import Search from "@/components/atoms/Search";
+import PaginationFilter from "@/components/cells/PaginationFilter";
 
 
 export default function Main() {
@@ -11,8 +12,20 @@ export default function Main() {
          <Hero/>
       </div>
      
+      <div className="mt-8
+                      max-w-5xl mx-auto">
+        <Filter/>
+        <div className="flex justify-end mt-6">
+          <Search/>
+        </div>
+        
+      </div> 
+
       <div className="max-w-5xl mx-auto select-none mt-14 mb-14">
         <ProductList/>
+      </div>
+      <div>
+        <PaginationFilter/>
       </div>
     </main>
   )
