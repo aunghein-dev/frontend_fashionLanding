@@ -3,13 +3,11 @@ import Products from "@/data/product.data";
 import PaginationFilter from "@/components/cells/PaginationFilter";
 import ProductList from "./ProductList";
 
-
 const ITEMS_PER_PAGE = 8;
 
 interface PaginatedProductsProps {
   scrollToTop: () => void;
 }
-
 
 export default function PaginatedProducts({ scrollToTop }: PaginatedProductsProps) {
   const [currentPage, setCurrentPage] = useState(0);

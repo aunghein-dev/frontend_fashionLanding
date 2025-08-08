@@ -1,11 +1,11 @@
 import Hero from "@/components/cells/Hero";
-import Filter from "./Filter";
 import Search from "@/components/atoms/Search";
-import PaginatedProducts from "./PaginatedProducts";
 import { useRef } from "react";
+import Filter from "@/layouts/main/Filter";
+import PaginatedProducts from "@/layouts/main/PaginatedProducts";
 
 
-export default function Main() {
+export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollToTop = () => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -25,8 +25,6 @@ export default function Main() {
         </div>
         
       </div> 
-
-      
       <PaginatedProducts scrollToTop={scrollToTop}/>
     </main>
   )

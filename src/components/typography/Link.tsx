@@ -20,7 +20,12 @@ export function Link({
   ...props
 }: LinkProps) {
   const resolvedPath = useResolvedPath(to);
-  const match = useMatch({ path: resolvedPath.pathname, end: true });
+
+  const match = useMatch({
+    path: resolvedPath.pathname,
+    end: resolvedPath.pathname === '/', 
+  });
+
   const finalClassName = [className, match ? activeClassName : '']
     .filter(Boolean)
     .join(' ');

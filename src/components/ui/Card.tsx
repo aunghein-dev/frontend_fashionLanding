@@ -1,3 +1,5 @@
+import { Link } from "../typography/Link"
+
 interface Color {
    id: number,
    hex: string,
@@ -15,10 +17,12 @@ interface CardProps {
 }
 
 export default function Card({ card }: CardProps) {
+  
   return (
-    <div className="h-[330px] 
+    <Link className="h-[330px] 
                     w-[190px] 
-                    font-noto">
+                    font-noto"
+          to={`/home/${card.name}`}>
       <div className="relative">
         <span className="h-[190px] w-full bg-hero-bg absolute top-0 left-0 bottom-0 right-0 rounded-[1.5rem]"/>
         <img
@@ -51,6 +55,6 @@ export default function Card({ card }: CardProps) {
       <button className="font-roboto text-[0.65rem] tracking-[0.3rem] p-2.5 bg-hero-bg text-white
                          font-[300] flex flex-row items-center justify-center w-full">ADD TO CART</button>
      
-    </div>
+    </Link>
   )
 }
