@@ -1,53 +1,38 @@
+import type { Stock } from "@/api/hooks/useStocks"
 import { Link } from "../typography/Link"
 
-interface Color {
-   id: number,
-   hex: string,
-   qty: number,
-   price: number
-}
-
-interface CardProps {
-  card: {
-    imgUrl: string 
-    name: string
-    displayPrice: number
-    colors: Color[]
-  }
-}
-
-export default function Card({ card }: CardProps) {
+export default function Card( card : Stock) {
   
   return (
     <Link className="h-[330px] 
                     w-[190px] 
                     font-noto"
-          to={`/home/${card.name}`}>
+          to={`/home/${card.groupName}`}>
       <div className="relative">
-        <span className="h-[190px] w-full bg-hero-bg absolute top-0 left-0 bottom-0 right-0 rounded-[1.5rem]"/>
+       
         <img
-          src={card.imgUrl}
-          alt={card.name}
-          className="w-full h-[190px] object-cover object-center rounded-[1.5rem] select-none opacity-80"
+          src={card.groupImage}
+          alt={card.groupName}
+          className="w-full h-[190px] object-cover object-center rounded-[1.5rem] select-none"
         />
       </div>
       
       <div className="flex flex-row items-center justify-between gap-1 py-2.5
                       border-b-[1px] border-divider-color text-lg">
           <span
-           title={card.name}
+           title={card.groupName}
            className="-tracking-[0.05rem] font-[300] truncate">
-              {card.name}
+              {card.groupName}
           </span>
           <span>
-            {card.displayPrice}
+            {card.groupUnitPrice}
           </span>
       </div>
       <div className="flex flex-row items-center gap-1 py-3 mb-3">
         {
-          card.colors.map(color => (
-            <div key={color.id} className="flex flex-row items-center gap-1">
-              <div className="w-5 h-5 rounded-full ring-[0.5px] ring-gray-300" style={{backgroundColor: color.hex}}></div>
+          card.items.map(item => (
+            <div key={item.itemId} className="flex flex-row items-center gap-1">
+              <div className="w-5 h-5 rounded-full ring-[0.5px] ring-gray-300" style={{backgroundColor: item.itemColorHex}}></div>
             </div>
           ))
         }

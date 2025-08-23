@@ -14,11 +14,6 @@ const NavbarData = [
     path: "/shop",
     id: 3
   },
-  {
-    name: "CONTACT",
-    path: "/contact",
-    id: 4
-  },
 ]
 
 export default NavbarData

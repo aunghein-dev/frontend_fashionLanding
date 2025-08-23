@@ -12,12 +12,12 @@ export default function Home() {
   };
 
   return (
-    <main className="flex-1 w-full p-0">
-      <div className="mt-[160px]">
+    <main className="flex-1 w-full">
+      <div className="sm:mt-[160px] mt-[100px]">
          <Hero/>
       </div>
      
-      <div className="pt-8 max-w-5xl mx-auto"
+      <div className="pt-8 max-w-5xl mx-auto bg-green-400 lg:px-0 px-6"
            ref={scrollRef}>
         <Filter/>
         <div className="flex justify-end mt-6">
@@ -25,8 +25,11 @@ export default function Home() {
         </div>
         
       </div> 
-      <PaginatedProducts scrollToTop={scrollToTop}/>
+
+      <div className="lg:px-0 px-6">
+        <PaginatedProducts scrollToTop={scrollToTop}/>
+      </div>
+      
     </main>
   )
-
 }
