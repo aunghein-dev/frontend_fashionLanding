@@ -1,5 +1,4 @@
 import Hero from "@/components/cells/Hero";
-import Search from "@/components/atoms/Search";
 import { useRef } from "react";
 import Filter from "@/layouts/main/Filter";
 import PaginatedProducts from "@/layouts/main/PaginatedProducts";
@@ -17,16 +16,12 @@ export default function Home() {
          <Hero/>
       </div>
      
-      <div className="pt-8 max-w-5xl mx-auto bg-green-400 lg:px-0 px-6"
+      <div className="pt-8 max-w-5xl mx-auto lg:px-0 px-6"
            ref={scrollRef}>
-        <Filter/>
-        <div className="flex justify-end mt-6">
-          <Search/>
-        </div>
-        
+        <Filter/>        
       </div> 
 
-      <div className="lg:px-0 px-6">
+      <div className="px-4 lg:px-0">
         <PaginatedProducts scrollToTop={scrollToTop}/>
       </div>
       

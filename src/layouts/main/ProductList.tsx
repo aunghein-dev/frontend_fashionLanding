@@ -7,10 +7,18 @@ interface ProductListProps {
 
 export default function ProductList({ products }: ProductListProps) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-[5.5rem] bg-red-600">
+    <div className="grid gap-6
+                    grid-cols-2
+                    sm:grid-cols-2
+                    md:grid-cols-3
+                    lg:grid-cols-4
+                    xl:grid-cols-4
+                    2xl:grid-cols-5
+                    px-2">
       {products.map((prod) => (
         <Card key={prod.groupId} {...prod} />
       ))}
     </div>
+
   );
 }

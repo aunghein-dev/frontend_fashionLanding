@@ -10,10 +10,9 @@ interface PaginatedProductsProps {
 }
 
 export default function PaginatedProducts({ scrollToTop }: PaginatedProductsProps) {
-    const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // ✅ Call useStocks once
   const { data: stocks = [], isLoading, isError } = useStocks();
 
   const totalPages = Math.ceil(stocks.length / ITEMS_PER_PAGE);
@@ -26,6 +25,11 @@ export default function PaginatedProducts({ scrollToTop }: PaginatedProductsProp
       setCurrentPage((prev) => prev + 1);
     }
   };
+
+  useEffect(()  => {
+    console.log(stocks);
+    
+  },[])
 
   const handlePageChange = (pageIndex: number) => {
     scrollToTop();

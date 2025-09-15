@@ -8,9 +8,20 @@ export default {
   
   theme: {
   extend: {
+    keyframes: {
+      fadeIn: {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '1' },
+      },
+    },
+    animation: {
+      fadeIn: 'fadeIn 0.7s ease-in-out forwards',
+    },
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
       'noto': ['Noto Serif Display', 'serif'],
+      'josefin': ['Josefin Slab', 'serif'],
+      'lexend': ['Lexend', 'sans-serif'],
     },
     colors: {
       'background-color': 'var(--bg-color)',
