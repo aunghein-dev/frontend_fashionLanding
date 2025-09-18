@@ -8,6 +8,9 @@ import ScrollToTop from "./utils/ScrollToTop";
 import TermsAndConditionsPage from "./pages/TermsAndConditions";
 import NewArrivals from "./pages/NewArrivals";
 import { useState } from "react";
+import { Store } from "lucide-react";
+import StoreLocations from "./pages/StoreLocations";
+import BestSellers from "./pages/BestSellers";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,6 +27,8 @@ function App() {
           <Route path="*" element={<p>Not Found</p>} />
           <Route path="/termsAndConditions" element={<TermsAndConditionsPage/>} />
           <Route path="/new-arrivals" element={<NewArrivals searchQuery={searchQuery} scrollToTop={() => window.scrollTo(0, 0)}/>} />
+          <Route path="/locations" element={<StoreLocations/>} />
+          <Route path="/best-sellers" element={<BestSellers/>} />
         </Routes>
       </main>
 

@@ -42,6 +42,7 @@ const Search = ({ query, setQuery }: SearchProps) => {
         className={`
           ml-2 bg-transparent text-xs font-[400] sm:text-sm 
           focus:outline-none transition-all duration-300 py-2 cursor-pointer font-noto
+          text-black-color
           ${shouldExpand ? "opacity-100 w-full" : "opacity-0 w-0"}
         `}
       />

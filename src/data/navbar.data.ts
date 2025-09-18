@@ -20,11 +20,6 @@ const NavbarData = [
     path: "/locations",
   },
   {
-    id: 5,
-    name: "About Us",
-    path: "/about-us",
-  },
-  {
     id: 6,
     name: "Terms & Conditions",
     path: "/termsAndConditions",

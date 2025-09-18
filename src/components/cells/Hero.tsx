@@ -52,12 +52,12 @@ const Hero = () => {
         </div>
       )}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-4 w-[180px] sm:w-[200px] z-30">
-        <span className="font-noto font-[300] tracking-[0.2rem] text-white text-center py-2 text-[1.4rem] sm:text-[1.6rem] w-full">
+        <span className="font-noto font-[300] tracking-[0.2rem] text-black text-center py-2 text-[1.4rem] sm:text-[1.6rem] w-full">
           New Arrivals
         </span>
         <Link
           to={"/new-arrivals"}
-          className="bg-white text-black font-[500] px-4 py-2 rounded-[5.5rem] w-full font-josefin flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out"
+          className="bg-black text-white font-[500] px-4 py-2 rounded-[5.5rem] w-full font-josefin flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out"
         >
           Discover
         </Link>

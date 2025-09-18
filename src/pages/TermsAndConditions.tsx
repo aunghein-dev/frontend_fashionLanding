@@ -14,11 +14,11 @@ export default function TermsAndConditionsPage() {
   }, []);
 
   return (
-    <div className="pt-[120px] sm:pt-[180px] max-w-5xl mx-auto font-lexend leading-relaxed 
+    <div className="pt-[100px] sm:pt-[160px] max-w-5xl mx-auto font-lexend leading-relaxed 
                     pb-[100px] px-5 xl:px-0 select-none">
     <h2 className="text-black-color text-3xl font-marcellus">Terms and Conditions</h2>
 
-    <div className="border-b border-red-200 mb-10"></div>
+    <div className="border-b border-pink-300 mb-10"></div>
     <div className="font-notosans leading-relaxed text-sm text-black-color [&_*]:text-black-color font-[400]">
       <ReactMarkdown
         components={{

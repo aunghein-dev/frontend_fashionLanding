@@ -50,7 +50,7 @@ export default function ProductInfo() {
 
   return (
     <div className="flex-1 w-full
-                    mt-[120px] sm:mt-[120px] mb-[20px] sm:mb-[20px] max-w-5xl mx-auto
+                    mt-[85px] sm:mt-[120px] mb-[20px] sm:mb-[20px] max-w-5xl mx-auto
                     lg:px-0 px-6">
       
       {/* Responsive grid: image + info */}

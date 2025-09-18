@@ -36,7 +36,7 @@ export default function Footer(){
           {/* Address */}
           <div className="flex flex-col items-start mb-2">
             <div className="flex items-center">
-              <FaLocationDot className="mr-2 text-pink-200 w-5 h-5" />
+              <FaLocationDot className="mr-2 text-pink-300 w-5 h-5" />
               <span>Shan Yoma field along,</span>
             </div>
             <span className="ml-7">Johnnie street, Tachileik.</span>
@@ -44,7 +44,7 @@ export default function Footer(){
 
           {/* Phone */}
           <div className="flex items-center">
-            <BiSolidPhoneCall className="mr-2 text-pink-200 w-5 h-5" />
+            <BiSolidPhoneCall className="mr-2 text-pink-300 w-5 h-5" />
             <span>{business?.phoneNum1}</span>
             {business?.phoneNum2 && <span>, {business?.phoneNum2}</span>}
           </div>
@@ -57,7 +57,7 @@ export default function Footer(){
           {/* Address */}
           <div className="flex flex-col items-start mb-2 ">
             <div className="flex items-center">
-              <FaLocationDot className="mr-2 text-pink-200 w-5 h-5" />
+              <FaLocationDot className="mr-2 text-pink-300 w-5 h-5" />
               <span>Nitchin Pagoda, Wunmaing Rd,</span>
             </div>
             <span className="ml-7">San Saing, Tachileik.</span>
@@ -65,7 +65,7 @@ export default function Footer(){
 
           {/* Phone */}
           <div className="flex items-center">
-            <BiSolidPhoneCall className="mr-2 text-pink-200 w-5 h-5" />
+            <BiSolidPhoneCall className="mr-2 text-pink-300 w-5 h-5" />
             <span>{business?.phoneNum1}</span>
             {business?.phoneNum2 && <span>, {business?.phoneNum2}</span>}
           </div>
@@ -85,8 +85,8 @@ export default function Footer(){
        <div className="mt-7 max-w-5xl mx-auto
                        flex flex-row items-center justify-between pb-2">           
           <div className="flex flex-row items-center text-center gap-5 mb-0">
-            <span className="font-josefin text-gray-white tracking-[0.2rem] text-sm">
-              {new Date().getFullYear()} {business?.businessName}. All rights reserved.</span>
+            <span className="font-roboto text-gray-white tracking-[0.2rem] text-sm">
+              {new Date().getFullYear()} All rights reserved.</span>
           </div>
           <div className="flex flex-row items-center">
 

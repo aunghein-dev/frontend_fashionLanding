@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
 import Hero from "@/components/cells/Hero";
 import Filter from "@/layouts/main/Filter";
 import PaginatedProducts from "@/layouts/main/PaginatedProducts";
 import BestSellerHero from "@/components/cells/BestSellerHero";
 import TopSellersProductsList from "@/layouts/main/TopSellersProductsList";
+import { useRef } from "react";
 
 interface Props {
   searchQuery: string;

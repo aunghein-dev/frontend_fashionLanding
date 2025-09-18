@@ -15,7 +15,7 @@ export default function Navbar({ query, setQuery }: NavbarProps) {
 
   return (
     <nav className="bg-base h-[60px] sm:h-[100px] fixed top-0 left-0 right-0 z-[1000] border-b border-gray-300/30 shadow-sm">
-      <div className="flex items-center justify-between h-full max-w-5xl mx-auto px-2 sm:px-5 relative">
+      <div className="flex items-center justify-between h-full max-w-5xl mx-auto px-4 lg:px-0 relative">
         {/* Left: Hamburger */}
         <button
           className="flex flex-row items-center gap-1"
@@ -27,8 +27,8 @@ export default function Navbar({ query, setQuery }: NavbarProps) {
         {/* Center: Always Centered Logo */}
         <div className="absolute left-1/2 -translate-x-1/2">
           <Link to={`/`}>
-            <span className="font-lexend font-[700] text-[1rem] sm:text-[1.7rem] cursor-pointer text-[#f56a6a]">
-              SweTrendyHub
+            <span className="font-noto font-[700] text-[1.2rem] sm:text-[1.7rem] cursor-pointer text-pink-300">
+              Swe Trendy Hub
             </span>
           </Link>
         </div>
@@ -49,7 +49,7 @@ export default function Navbar({ query, setQuery }: NavbarProps) {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 bottom-0 w-[300px] bg-[#fdf8ef] z-[999] pt-[80px] pl-10 
+        className={`fixed top-0 left-0 bottom-0 w-[300px] bg-white z-[999] pt-[80px] pl-10 
                     transform transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
                     ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
@@ -70,7 +70,7 @@ export default function Navbar({ query, setQuery }: NavbarProps) {
                         text-md tracking-wider mt-1
                         font-josefin font-[700] 
                         transition-all duration-150 ease-in-out
-                        ${item.name === "Best Sellers"? "text-[#f56a6a] border-b border-[#f56a6a] max-w-[130px]" : "text-gray-700 hover:text-gray-600" }  `}
+                        ${item.name === "Best Sellers"? "text-pink-300 border-b border-pink-300 max-w-[130px]" : "text-gray-700 hover:text-gray-600" }  `}
             >
               {item.name.toUpperCase()}
             </Link>
