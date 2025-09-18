@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import namer from "color-namer";
 import { useCurrency } from "@/api/hooks/useCurrency";
+import { ProductInfoDetails } from "@/layouts/main/ProdInfoLayout";
+import SuggestList from "@/layouts/main/SuggestList";
 
 export default function ProductInfo() {
   const { slug } = useParams();
@@ -19,6 +21,7 @@ export default function ProductInfo() {
         .filter(image => image && image.startsWith('https://'))
     : [];
   
+
   useEffect(() => {
     if (images.length > 0) setActiveIndex(0);
   }, [product]);
@@ -27,9 +30,12 @@ export default function ProductInfo() {
                            mt-[120px] sm:mt-[180px] mb-[20px] sm:mb-[20px] max-h-[550px]
                            grid grid-cols-1 sm:grid-cols-2 gap-10 items-cente aspect-[4/5]">Product not found</div>;
 
-  const selectedAvailableQty = product.items.find(
-    (item) => item.itemColorHex === selectedHex
-  )?.itemQuantity;
+ const selectedAvailableQty =
+  product.items.find((item) => item.itemColorHex === selectedHex)?.itemQuantity ?? null;
+
+  useEffect(() => {
+    setSelectedHex(null);
+  }, [product]);
 
 
   if(isLoading) {
@@ -44,7 +50,7 @@ export default function ProductInfo() {
 
   return (
     <div className="flex-1 w-full
-                    mt-[120px] sm:mt-[180px] mb-[20px] sm:mb-[20px] max-w-5xl mx-auto
+                    mt-[120px] sm:mt-[120px] mb-[20px] sm:mb-[20px] max-w-5xl mx-auto
                     lg:px-0 px-6">
       
       {/* Responsive grid: image + info */}
@@ -73,47 +79,17 @@ export default function ProductInfo() {
         </div>
 
         {/* Info */}
-        <div className="flex flex-col justify-start gap-y-6 sm:mt-0 px-2 sm:px-0">
-          <span className="font-lexend text-[clamp(1.8rem,4vw,2.5rem)] leading-tight">
-            {product.groupName}
-          </span>
-          <span className="font-lexend text-[clamp(1.2rem,2.5vw,1.8rem)] text-[#08080880]">
-            {display(product.groupUnitPrice)}
-          </span>
+        <ProductInfoDetails
+          product={product}
+          selectedHex={selectedHex}
+          setSelectedHex={setSelectedHex}
+          selectedAvailableQty={selectedAvailableQty}
+          display={display}
+        />
+      </div>
 
-          {/* Color selector */}
-          <div className="flex flex-col gap-y-3">
-            <span>
-              <span className="font-josefin">Color </span>
-              <span className="font-lexend text-sm">
-                : {selectedHex ? namer(selectedHex).ntc[0].name : ""}
-              </span>
-            </span>
-            <ColorRender 
-              items={product.items} 
-              setSelectedHex={setSelectedHex} 
-              selectedHex={selectedHex}
-            />
-          </div>
-
-          {/* Quantity */}
-          <div className="">
-            <span className="font-josefin">Available Quantity </span>
-            <span className="font-lexend">: {selectedAvailableQty ?? "-"}</span>
-          </div>
-
-          {/* Clear button */}
-          <div className="min-h-[40px]">
-            {selectedHex && (
-              <button 
-                onClick={() => setSelectedHex(null)}
-                className="text-red-500 text-xs hover:text-gray-600 transition-colors"
-              >
-                Clear
-              </button>
-            )}
-          </div>
-        </div>
+      <div>
+        {product && <SuggestList groupId={product.groupId} />}
       </div>
     </div>
   );

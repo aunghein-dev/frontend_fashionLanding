@@ -31,7 +31,7 @@ export default function Footer(){
    <div className="mx-auto text-gray-white min-h-[20px] font-josefin 
                 max-w-[550px] grid grid-cols-1 sm:grid-cols-[1fr_1px_1fr] gap-4 items-stretch ">
         {/* Left Column */}
-        <div className="flex flex-col justify-center h-full  max-w-[390px] sm:w-full
+        <div className="flex flex-col justify-center h-full max-w-[390px] sm:w-full
                         border-r-[1px] border-divider sm:border-none">
           {/* Address */}
           <div className="flex flex-col items-start mb-2">

@@ -41,3 +41,13 @@ export function useStocks() {
     `/public/mo/v1/stocks/${BIZID}`
   );
 }
+
+
+
+export function useSuggestedStocks(groupId: number) {
+  const BIZID = import.meta.env.VITE_BUSINESS_ID;
+  return useApiQuery<Stock[]>(
+    ["suggested-stocks", groupId],
+    `/public/mo/v1/suggested-stocks/${groupId}/${BIZID}`
+  );
+}

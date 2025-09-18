@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "../typography/Link";
 
-const Hero = () => {
+const BestSellerHero = () => {
   const BIZID = import.meta.env.VITE_BUSINESS_ID;
   const API = import.meta.env.VITE_API;
 
@@ -13,7 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchHeroImages = async () => {
       try {
-        const res = await axios.get(`${API}/public/mo/v1/hero-imgs/${BIZID}`, {
+        const res = await axios.get(`${API}/public/mo/v1/top-hero-images/${BIZID}`, {
           withCredentials: true,
         });
         const data = res.data as string[];
@@ -36,7 +36,7 @@ const Hero = () => {
   }, [images]);
 
   return (
-    <div className="relative w-full h-[300px] sm:h-[380px] lg:h-[450px] overflow-hidden select-none -mt-[40px] sm:mt-[0px]">
+    <div className="relative w-full h-[300px] sm:h-[380px] lg:h-[450px] overflow-hidden select-none mt-[80px] mb-10">
       {loading && <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>}
       {!loading && images.length > 0 && (
         <div className="absolute inset-0 w-full h-full">
@@ -53,17 +53,11 @@ const Hero = () => {
       )}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-4 w-[180px] sm:w-[200px] z-30">
         <span className="font-noto font-[300] tracking-[0.2rem] text-white text-center py-2 text-[1.4rem] sm:text-[1.6rem] w-full">
-          New Arrivals
+          Best Sellers
         </span>
-        <Link
-          to={"/new-arrivals"}
-          className="bg-white text-black font-[500] px-4 py-2 rounded-[5.5rem] w-full font-josefin flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out"
-        >
-          Discover
-        </Link>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default BestSellerHero;

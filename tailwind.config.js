@@ -17,12 +17,15 @@ export default {
     animation: {
       fadeIn: 'fadeIn 0.7s ease-in-out forwards',
     },
-    fontFamily: {
+      fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
       'noto': ['Noto Serif Display', 'serif'],
       'josefin': ['Josefin Slab', 'serif'],
       'lexend': ['Lexend', 'sans-serif'],
+      'notosans': ['Noto Sans Myanmar', 'sans-serif'],
+      'marcellus': ['Marcellus', 'serif'],
     },
+
     colors: {
       'background-color': 'var(--bg-color)',
       'text-color': 'var(--text-color)',
