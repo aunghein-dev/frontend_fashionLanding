@@ -18,7 +18,7 @@ interface CurrencyRateResponse {
 }
 
 const LOCAL_STORAGE_KEY = "currencysecrectkey-openwaremyanmar.com";
-const API = "http://localhost:8080";
+const API = import.meta.env.VITE_API_BASE_URL;
 
 export interface CurrencyStore {
   currency: CurrencyInterface;
