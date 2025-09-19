@@ -45,8 +45,8 @@ export default function Footer(){
           {/* Phone */}
           <div className="flex items-center">
             <BiSolidPhoneCall className="mr-2 text-pink-300 w-5 h-5" />
-            <span>{business?.phoneNum1}</span>
-            {business?.phoneNum2 && <span>, {business?.phoneNum2}</span>}
+            <span>09451922223</span>
+            <span>, 09758113774</span>
           </div>
         </div>
 
@@ -66,8 +66,8 @@ export default function Footer(){
           {/* Phone */}
           <div className="flex items-center">
             <BiSolidPhoneCall className="mr-2 text-pink-300 w-5 h-5" />
-            <span>{business?.phoneNum1}</span>
-            {business?.phoneNum2 && <span>, {business?.phoneNum2}</span>}
+            <span>09451922223</span>
+            <span>, 09758113774</span>
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ export default function TopSellersProductsList() {
       ) : products.length > 0 ? (
         products.map((prod) => <Card key={prod.groupId} {...prod} />)
       ) : (
-        <p className="col-span-full text-center text-gray-500">No top sellers yet</p>
+        <p className="col-span-full text-center text-gray-500 font-josefin">No top sellers yet</p>
       )}
     </div>
   );

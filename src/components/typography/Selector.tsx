@@ -5,25 +5,31 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { SelectItem } from "./SelectItem"
+} from "@/components/ui/select";
+import { SelectItem } from "./SelectItem";
 
-type extraClass = {
-  holderClass?: string,
-  itemClass?: string
-}
+type ExtraClass = {
+  holderClass?: string;
+  itemClass?: string;
+};
 
 type SelectorProps = {
-  header: string,
-  options: string[],
-  value?: string,
-  onChange?: (value: string) => void,
-  className?: extraClass
-}
+  header: string;
+  options: string[];
+  value?: string; // currently selected value
+  onChange?: (value: string) => void; // callback when user selects an option
+  className?: ExtraClass;
+};
 
-export default function Selector({ header, options, value, onChange, className }: SelectorProps) {
-  const holderClass = className?.holderClass ?? ""
-  const itemClass = className?.itemClass ?? ""
+export default function Selector({
+  header,
+  options,
+  value,
+  onChange,
+  className,
+}: SelectorProps) {
+  const holderClass = className?.holderClass ?? "";
+  const itemClass = className?.itemClass ?? "";
 
   return (
     <Select value={value} onValueChange={onChange}>
@@ -53,5 +59,5 @@ export default function Selector({ header, options, value, onChange, className }
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }

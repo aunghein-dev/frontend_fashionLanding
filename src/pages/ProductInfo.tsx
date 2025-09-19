@@ -28,7 +28,8 @@ export default function ProductInfo() {
 
   if (!product) return <div className="flex-1 w-full max-w-[90vw] lg:max-w-6xl mx-auto 
                            mt-[120px] sm:mt-[180px] mb-[20px] sm:mb-[20px] max-h-[550px]
-                           grid grid-cols-1 sm:grid-cols-2 gap-10 items-cente aspect-[4/5]">Product not found</div>;
+                           grid grid-cols-1 sm:grid-cols-2 gap-10 items-cente aspect-[4/5]
+                           font-josefin px-6">Product not found</div>;
 
  const selectedAvailableQty =
   product.items.find((item) => item.itemColorHex === selectedHex)?.itemQuantity ?? null;
