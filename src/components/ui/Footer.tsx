@@ -107,9 +107,7 @@ export default function Footer(){
               <CurrencySelector/>
             </div>
           </div>
-          
        </div>
-      <div className="min-h-[20px] sm:min-h-[10px]"></div>
     </footer>
   )
 }
