@@ -51,7 +51,7 @@ export default function PaginatedProducts({ scrollToTop, searchQuery, sortOption
     setCurrentPage(pageIndex);
   };
 
-  if (isError) return <p>Something went wrong</p>;
+  if (isError) return <p className="font-josefin px-5">Something went wrong</p>;
 
   return (
     <div ref={scrollRef}>
