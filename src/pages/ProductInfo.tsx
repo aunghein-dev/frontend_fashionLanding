@@ -1,9 +1,9 @@
 import { useStocks } from "@/api/hooks/useStocks";
-import { ColorRender } from "@/components/ui/ColorRender";
+//import { ColorRender } from "@/components/ui/ColorRender";
 import { ImageSlider } from "@/components/ui/ImageSlider";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import namer from "color-namer";
+//import namer from "color-namer";
 import { useCurrency } from "@/api/hooks/useCurrency";
 import { ProductInfoDetails } from "@/layouts/main/ProdInfoLayout";
 import SuggestList from "@/layouts/main/SuggestList";

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Hero from "@/components/cells/Hero";
 import Filter from "@/layouts/main/Filter";
 import PaginatedProducts from "@/layouts/main/PaginatedProducts";
@@ -7,14 +7,16 @@ import TopSellersProductsList from "@/layouts/main/TopSellersProductsList";
 
 interface Props {
   searchQuery: string;
+  sortOption: "default" | "lowToHigh" | "highToLow";
+  setSortOption: (option: "default" | "lowToHigh" | "highToLow") => void;
 }
 
-export default function Home({ searchQuery }: Props) {
+export default function Home({ searchQuery, sortOption, setSortOption }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollToTop = () => scrollRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   // New filter state
-  const [sortOption, setSortOption] = useState<"default" | "lowToHigh" | "highToLow">("default");
+  
 
   return (
     <main className="flex-1 w-full mt-[100px]">

@@ -8,13 +8,13 @@ import ScrollToTop from "./utils/ScrollToTop";
 import TermsAndConditionsPage from "./pages/TermsAndConditions";
 import NewArrivals from "./pages/NewArrivals";
 import { useState } from "react";
-import { Store } from "lucide-react";
+//import { Store } from "lucide-react";
 import StoreLocations from "./pages/StoreLocations";
 import BestSellers from "./pages/BestSellers";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [sortOption, setSortOption] = useState<"default" | "lowToHigh" | "highToLow">("default");
   return (
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
@@ -22,11 +22,17 @@ function App() {
 
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home searchQuery={searchQuery}/>} />
+          <Route path="/" element={<Home 
+                          searchQuery={searchQuery} 
+                          sortOption={sortOption} 
+                          setSortOption={setSortOption} />} />
           <Route path="/home/:slug" element={<ProductInfo />} />
-          <Route path="*" element={<p>Not Found</p>} />
+          <Route path="*" element={<></>} />
           <Route path="/termsAndConditions" element={<TermsAndConditionsPage/>} />
-          <Route path="/new-arrivals" element={<NewArrivals searchQuery={searchQuery} scrollToTop={() => window.scrollTo(0, 0)}/>} />
+          <Route path="/new-arrivals" element={<NewArrivals 
+                                                searchQuery={searchQuery} 
+                                                scrollToTop={() => window.scrollTo(0, 0)}
+                                                sortOption={sortOption}/>} />
           <Route path="/locations" element={<StoreLocations/>} />
           <Route path="/best-sellers" element={<BestSellers/>} />
         </Routes>

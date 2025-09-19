@@ -1,14 +1,14 @@
-import Selector from "../typography/Selector";
-import PaymentList from "../cells/PaymentList";
+//import Selector from "../typography/Selector";
+//import PaymentList from "../cells/PaymentList";
 import { FaLocationDot } from "react-icons/fa6";
-import { useBusiness } from "@/api/hooks/useBusiness";
+//import { useBusiness } from "@/api/hooks/useBusiness";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import CurrencySelector from "../atoms/CurrencySelector";
 import { Link } from "../typography/Link";
 
 export default function Footer(){
 
-  const {data : business} = useBusiness();
+  //const {data : business} = useBusiness();
  
   return (
     <footer className="bg-black-color text-text-color min-h-[130px] pt-10 pl-5 lg:pl-0 ">

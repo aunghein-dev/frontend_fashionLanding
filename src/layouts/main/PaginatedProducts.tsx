@@ -29,14 +29,15 @@ export default function PaginatedProducts({ scrollToTop, searchQuery, sortOption
     filteredStocks = filteredStocks.sort((a, b) => b.groupUnitPrice - a.groupUnitPrice);
   }
 
-  const totalPages = Math.ceil(filteredStocks.length / 8);
+  
+  const totalPages = Math.ceil(filteredStocks.length / ITEMS_PER_PAGE);
 
   useEffect(() => {
     if (currentPage >= totalPages) setCurrentPage(0);
   }, [searchQuery, sortOption, totalPages]);
 
-  const startIndex = currentPage * 8;
-  const paginatedItems = filteredStocks.slice(startIndex, startIndex + 8);
+  const startIndex = currentPage * ITEMS_PER_PAGE;
+  const paginatedItems = filteredStocks.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   const handleNext = () => {
     if (currentPage < totalPages - 1) {

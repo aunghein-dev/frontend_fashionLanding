@@ -4,9 +4,10 @@ import PaginatedProducts from "@/layouts/main/PaginatedProducts";
 interface Props {
   scrollToTop: () => void;
   searchQuery: string;
+  sortOption: "default" | "lowToHigh" | "highToLow";
 }
 
-export default function NewArrivals({ scrollToTop, searchQuery }: Props) {
+export default function NewArrivals({ scrollToTop, searchQuery, sortOption }: Props) {
   return (
     <div className="flex-1 w-full
                     mt-[120px] sm:mt-[180px] mb-[20px] sm:mb-[20px] max-w-5xl mx-auto
@@ -20,7 +21,9 @@ export default function NewArrivals({ scrollToTop, searchQuery }: Props) {
 
        
       <div className="px-4 lg:px-0">
-        <PaginatedProducts scrollToTop={scrollToTop} searchQuery={searchQuery} />
+        <PaginatedProducts scrollToTop={scrollToTop} 
+                           searchQuery={searchQuery}
+                           sortOption={sortOption} />
       </div>
 
     </div>

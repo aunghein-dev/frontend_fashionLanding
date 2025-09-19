@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "../typography/Link";
+//import { Link } from "../typography/Link";
 
 const BestSellerHero = () => {
   const BIZID = import.meta.env.VITE_BUSINESS_ID;
