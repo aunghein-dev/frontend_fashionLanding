@@ -8,7 +8,6 @@ import ScrollToTop from "./utils/ScrollToTop";
 import TermsAndConditionsPage from "./pages/TermsAndConditions";
 import NewArrivals from "./pages/NewArrivals";
 import { useState } from "react";
-//import { Store } from "lucide-react";
 import StoreLocations from "./pages/StoreLocations";
 import BestSellers from "./pages/BestSellers";
 
