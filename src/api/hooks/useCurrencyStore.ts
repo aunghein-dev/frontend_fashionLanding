@@ -52,7 +52,7 @@ export const useCurrencyStore = create<CurrencyStore>()(
         if (!bizId) return;
         set({ loading: true });
         try {
-          const res = await axios.get(`${API}/currency-rate/${bizId}`, { withCredentials: true });
+          const res = await axios.get(`${API}/public/mo/v1/rate/${bizId}`, { withCredentials: true });
           if (res.data?.length) {
             const rates: Record<string, { baseInRate: number; baseInDefault: number }> = {};
             res.data.forEach((r: CurrencyRateResponse) => {

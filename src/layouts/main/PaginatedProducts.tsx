@@ -17,6 +17,14 @@ export default function PaginatedProducts({ scrollToTop, searchQuery, sortOption
 
   const { data: stocks = [], isLoading, isError } = useStocks();
 
+  const handlePrev = () => {
+    if (currentPage > 0) {
+      setCurrentPage((prev) => prev - 1);
+      scrollToTop();
+    }
+  };
+
+
   // Filter stocks based on search query
   let filteredStocks = stocks.filter(stock =>
     stock.groupName.toLowerCase().includes(searchQuery.toLowerCase())
@@ -68,8 +76,10 @@ export default function PaginatedProducts({ scrollToTop, searchQuery, sortOption
         currentPage={currentPage}
         totalPages={totalPages}
         onNext={handleNext}
+        onPrev={handlePrev}
         onPageChange={handlePageChange}
       />
+
     </div>
   );
 }
