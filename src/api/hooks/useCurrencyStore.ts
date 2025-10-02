@@ -19,6 +19,7 @@ interface CurrencyRateResponse {
 
 const LOCAL_STORAGE_KEY = "currencysecrectkey-openwaremyanmar.com";
 const API = import.meta.env.VITE_API;
+const BIZID = import.meta.env.VITE_BUSINESS_ID;
 
 export interface CurrencyStore {
   currency: CurrencyInterface;
@@ -48,11 +49,11 @@ export const useCurrencyStore = create<CurrencyStore>()(
         isReady: false
       }),
 
-      fetchCurrency: async (bizId?: number) => {
-        if (!bizId) return;
+      fetchCurrency: async () => {
+        if (!BIZID) return;
         set({ loading: true });
         try {
-          const res = await axios.get(`${API}/public/mo/v1/rate/${bizId}`, { withCredentials: true });
+          const res = await axios.get(`${API}/public/mo/v1/rate/${BIZID}`, { withCredentials: true });
           if (res.data?.length) {
             const rates: Record<string, { baseInRate: number; baseInDefault: number }> = {};
             res.data.forEach((r: CurrencyRateResponse) => {

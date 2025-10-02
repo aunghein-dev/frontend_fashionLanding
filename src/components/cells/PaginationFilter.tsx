@@ -20,36 +20,32 @@ export default function PaginationFilter({
   const inactive =
     "px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-full transition";
 
-  // Helper to generate page numbers with "..." like Pornhub
-  const getPageNumbers = () => {
-    const pages: (number | string)[] = [];
 
-    if (totalPages <= 7) {
-      // Show all if few pages
-      for (let i = 0; i < totalPages; i++) {
-        pages.push(i);
-      }
-    } else {
-      if (currentPage > 2) {
-        pages.push(0); // always show first
-        if (currentPage > 3) pages.push("…"); // add ellipsis
-      }
+const getPageNumbers = () => {
+  const pages: (number | string)[] = [];
 
-      const start = Math.max(0, currentPage - 1);
-      const end = Math.min(totalPages - 1, currentPage + 1);
+  if (totalPages === 0) return pages;
 
-      for (let i = start; i <= end; i++) {
-        pages.push(i);
-      }
+  if (currentPage > 2) {
+    pages.push(0);
+    if (currentPage > 3) pages.push("…");
+  }
 
-      if (currentPage < totalPages - 3) {
-        pages.push("…");
-        pages.push(totalPages - 1); // always show last
-      }
-    }
+  const start = Math.max(0, currentPage - 1);
+  const end = Math.min(totalPages - 1, currentPage + 1);
 
-    return pages;
-  };
+  for (let i = start; i <= end; i++) {
+    pages.push(i);
+  }
+
+  if (currentPage < totalPages - 3) {
+    pages.push("…");
+    pages.push(totalPages - 1);
+  }
+
+  return pages;
+};
+
 
   return (
     <div className="flex items-center justify-center py-5 gap-5">

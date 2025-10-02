@@ -27,7 +27,7 @@ export default function Navbar({ query, setQuery }: NavbarProps) {
         {/* Center: Always Centered Logo */}
         <div className="absolute left-1/2 -translate-x-1/2">
           <Link to={`/`}>
-            <span className="font-noto font-[700] text-[1.2rem] sm:text-[1.7rem] cursor-pointer text-pink-300">
+            <span className="font-noto font-[700] text-[1.2rem] sm:text-[1.7rem] cursor-pointer text-gray-800 hover:text-gray-700 transition-colors duration-200">
               Swe Trendy Hub
             </span>
           </Link>

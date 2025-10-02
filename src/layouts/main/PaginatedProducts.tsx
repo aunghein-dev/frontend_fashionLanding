@@ -25,12 +25,12 @@ export default function PaginatedProducts({ scrollToTop, searchQuery, sortOption
   };
 
 
-  // Filter stocks based on search query
+
   let filteredStocks = stocks.filter(stock =>
     stock.groupName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Apply sorting
+
   if (sortOption === "lowToHigh") {
     filteredStocks = filteredStocks.sort((a, b) => a.groupUnitPrice - b.groupUnitPrice);
   } else if (sortOption === "highToLow") {
