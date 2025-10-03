@@ -52,10 +52,10 @@ export default function StoreLocations() {
           />
           <div className="flex flex-col sm:hidden items-center justify-center mt-3">
             <p className="text-xl font-josefin text-black-color mb-2 text-center">
-              No. 123, Main Street, Yangon.
+              Nitchin Pagoda, Wunmaing Rd, San Saing, Tachileik.
             </p>
             <p className="text-xl font-josefin text-black-color text-center">
-              09-111111111, 09-222222222
+              09451922223, 09758113774
             </p>
           </div>
         </div>
@@ -68,10 +68,10 @@ export default function StoreLocations() {
           </div>
           <div className="flex-col items-start hidden sm:block">
             <p className="text-xl font-josefin text-black-color mb-2">
-              No. 123, Main Street, Yangon.
+              Nitchin Pagoda, Wunmaing Rd, San Saing, Tachileik.
             </p>
             <p className="text-xl font-josefin text-black-color">
-              09-111111111, 09-222222222
+              09451922223, 09758113774
             </p>
           </div>
         </div>
